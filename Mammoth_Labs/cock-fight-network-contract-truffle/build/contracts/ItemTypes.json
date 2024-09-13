@@ -1,0 +1,991 @@
+{
+  "contractName": "ItemTypes",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.7+commit.e28d00a7\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/cock-fight/libraries/ItemTypes.sol\":\"ItemTypes\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/cock-fight/libraries/ItemTypes.sol\":{\"keccak256\":\"0x1c4fd8c8fcb1d35af3308dcf78aedad7b2c383ab0f096e2259c88e2569f17c9e\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://739ed4f3147e0d50e87ab39b6a902cb3e5fdf2548d751a2bb571c4507af31d98\",\"dweb:/ipfs/QmVLxyiWptP2hXnfN2NB52kBAkGzBuNDhPGaM45zrcjxyT\"]}},\"version\":1}",
+  "bytecode": "0x60566037600b82828239805160001a607314602a57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220573580ab1d61285d8b50f721baba4f30d8f810d021400e87bb63bd4d3b87f4bc64736f6c63430008070033",
+  "deployedBytecode": "0x73000000000000000000000000000000000000000030146080604052600080fdfea2646970667358221220573580ab1d61285d8b50f721baba4f30d8f810d021400e87bb63bd4d3b87f4bc64736f6c63430008070033",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "57:1124:34:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;57:1124:34;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "57:1124:34:-:0;;;;;;;;",
+  "source": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.1;\n\nlibrary ItemTypes {\n    struct EggItem {\n        uint256 tokenId;\n        // sale\n        bool isSale;\n        uint256 price;\n        uint256 day;\n    }\n\n    struct EggConsumeItem {\n        address eggContract;\n        uint256 eggTokenId;\n        address eggItemContract;\n        uint256 eggItemTokenId;\n        uint256 eggItemAmount;\n    }\n\n    struct ChickItem {\n        uint256 tokenId;\n        bool isPulletPossible;\n        bool isSale;\n        uint256 price;\n        uint256 day;\n        uint256 statsIndex;\n    }\n\n    struct ChickConsumeItem {\n        address CockerelChickContract;\n        uint256 CockerelChickTokenId;\n        address PulletChickContract;\n        uint256 PulletChickTokenId;\n        address chickItemContract;\n        uint256 chickItemTokenId;\n        uint256 chickItemAmount;\n    }\n\n    struct CockItem {\n        uint256 tokenId;\n        bool isSale;\n        uint256 price;\n        bool healing;\n    }\n\n    struct CockConsumeItem {\n        address CockContract;\n        uint256 CockTokenId;\n        address cockItemContract;\n        uint256 cockItemTokenId;\n        uint256 cockItemAmount;\n    }\n}\n",
+  "sourcePath": "/Users/minki/Desktop/Codberg/cock-fight-network-contrats/cotract-test/contracts/cock-fight/libraries/ItemTypes.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/cock-fight/libraries/ItemTypes.sol",
+    "exportedSymbols": {
+      "ItemTypes": [
+        9125
+      ]
+    },
+    "id": 9126,
+    "license": "MIT",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 9056,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".1"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "32:23:34"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "library",
+        "fullyImplemented": true,
+        "id": 9125,
+        "linearizedBaseContracts": [
+          9125
+        ],
+        "name": "ItemTypes",
+        "nameLocation": "65:9:34",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "ItemTypes.EggItem",
+            "id": 9065,
+            "members": [
+              {
+                "constant": false,
+                "id": 9058,
+                "mutability": "mutable",
+                "name": "tokenId",
+                "nameLocation": "114:7:34",
+                "nodeType": "VariableDeclaration",
+                "scope": 9065,
+                "src": "106:15:34",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 9057,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "106:7:34",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 9060,
+                "mutability": "mutable",
+                "name": "isSale",
+                "nameLocation": "152:6:34",
+                "nodeType": "VariableDeclaration",
+                "scope": 9065,
+                "src": "147:11:34",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 9059,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "147:4:34",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 9062,
+                "mutability": "mutable",
+                "name": "price",
+                "nameLocation": "176:5:34",
+                "nodeType": "VariableDeclaration",
+                "scope": 9065,
+                "src": "168:13:34",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 9061,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "168:7:34",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 9064,
+                "mutability": "mutable",
+                "name": "day",
+                "nameLocation": "199:3:34",
+                "nodeType": "VariableDeclaration",
+                "scope": 9065,
+                "src": "191:11:34",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 9063,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "191:7:34",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "EggItem",
+            "nameLocation": "88:7:34",
+            "nodeType": "StructDefinition",
+            "scope": 9125,
+            "src": "81:128:34",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "ItemTypes.EggConsumeItem",
+            "id": 9076,
+            "members": [
+              {
+                "constant": false,
+                "id": 9067,
+                "mutability": "mutable",
+                "name": "eggContract",
+                "nameLocation": "255:11:34",
+                "nodeType": "VariableDeclaration",
+                "scope": 9076,
+                "src": "247:19:34",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 9066,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "247:7:34",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 9069,
+                "mutability": "mutable",
+                "name": "eggTokenId",
+                "nameLocation": "284:10:34",
+                "nodeType": "VariableDeclaration",
+                "scope": 9076,
+                "src": "276:18:34",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 9068,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "276:7:34",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 9071,
+                "mutability": "mutable",
+                "name": "eggItemContract",
+                "nameLocation": "312:15:34",
+                "nodeType": "VariableDeclaration",
+                "scope": 9076,
+                "src": "304:23:34",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 9070,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "304:7:34",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 9073,
+                "mutability": "mutable",
+                "name": "eggItemTokenId",
+                "nameLocation": "345:14:34",
+                "nodeType": "VariableDeclaration",
+                "scope": 9076,
+                "src": "337:22:34",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 9072,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "337:7:34",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 9075,
+                "mutability": "mutable",
+                "name": "eggItemAmount",
+                "nameLocation": "377:13:34",
+                "nodeType": "VariableDeclaration",
+                "scope": 9076,
+                "src": "369:21:34",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 9074,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "369:7:34",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "EggConsumeItem",
+            "nameLocation": "222:14:34",
+            "nodeType": "StructDefinition",
+            "scope": 9125,
+            "src": "215:182:34",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "ItemTypes.ChickItem",
+            "id": 9089,
+            "members": [
+              {
+                "constant": false,
+                "id": 9078,
+                "mutability": "mutable",
+                "name": "tokenId",
+                "nameLocation": "438:7:34",
+                "nodeType": "VariableDeclaration",
+                "scope": 9089,
+                "src": "430:15:34",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 9077,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "430:7:34",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 9080,
+                "mutability": "mutable",
+                "name": "isPulletPossible",
+                "nameLocation": "460:16:34",
+                "nodeType": "VariableDeclaration",
+                "scope": 9089,
+                "src": "455:21:34",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 9079,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "455:4:34",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 9082,
+                "mutability": "mutable",
+                "name": "isSale",
+                "nameLocation": "491:6:34",
+                "nodeType": "VariableDeclaration",
+                "scope": 9089,
+                "src": "486:11:34",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 9081,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "486:4:34",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 9084,
+                "mutability": "mutable",
+                "name": "price",
+                "nameLocation": "515:5:34",
+                "nodeType": "VariableDeclaration",
+                "scope": 9089,
+                "src": "507:13:34",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 9083,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "507:7:34",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 9086,
+                "mutability": "mutable",
+                "name": "day",
+                "nameLocation": "538:3:34",
+                "nodeType": "VariableDeclaration",
+                "scope": 9089,
+                "src": "530:11:34",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 9085,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "530:7:34",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 9088,
+                "mutability": "mutable",
+                "name": "statsIndex",
+                "nameLocation": "559:10:34",
+                "nodeType": "VariableDeclaration",
+                "scope": 9089,
+                "src": "551:18:34",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 9087,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "551:7:34",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "ChickItem",
+            "nameLocation": "410:9:34",
+            "nodeType": "StructDefinition",
+            "scope": 9125,
+            "src": "403:173:34",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "ItemTypes.ChickConsumeItem",
+            "id": 9104,
+            "members": [
+              {
+                "constant": false,
+                "id": 9091,
+                "mutability": "mutable",
+                "name": "CockerelChickContract",
+                "nameLocation": "624:21:34",
+                "nodeType": "VariableDeclaration",
+                "scope": 9104,
+                "src": "616:29:34",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 9090,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "616:7:34",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 9093,
+                "mutability": "mutable",
+                "name": "CockerelChickTokenId",
+                "nameLocation": "663:20:34",
+                "nodeType": "VariableDeclaration",
+                "scope": 9104,
+                "src": "655:28:34",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 9092,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "655:7:34",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 9095,
+                "mutability": "mutable",
+                "name": "PulletChickContract",
+                "nameLocation": "701:19:34",
+                "nodeType": "VariableDeclaration",
+                "scope": 9104,
+                "src": "693:27:34",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 9094,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "693:7:34",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 9097,
+                "mutability": "mutable",
+                "name": "PulletChickTokenId",
+                "nameLocation": "738:18:34",
+                "nodeType": "VariableDeclaration",
+                "scope": 9104,
+                "src": "730:26:34",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 9096,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "730:7:34",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 9099,
+                "mutability": "mutable",
+                "name": "chickItemContract",
+                "nameLocation": "774:17:34",
+                "nodeType": "VariableDeclaration",
+                "scope": 9104,
+                "src": "766:25:34",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 9098,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "766:7:34",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 9101,
+                "mutability": "mutable",
+                "name": "chickItemTokenId",
+                "nameLocation": "809:16:34",
+                "nodeType": "VariableDeclaration",
+                "scope": 9104,
+                "src": "801:24:34",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 9100,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "801:7:34",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 9103,
+                "mutability": "mutable",
+                "name": "chickItemAmount",
+                "nameLocation": "843:15:34",
+                "nodeType": "VariableDeclaration",
+                "scope": 9104,
+                "src": "835:23:34",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 9102,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "835:7:34",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "ChickConsumeItem",
+            "nameLocation": "589:16:34",
+            "nodeType": "StructDefinition",
+            "scope": 9125,
+            "src": "582:283:34",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "ItemTypes.CockItem",
+            "id": 9113,
+            "members": [
+              {
+                "constant": false,
+                "id": 9106,
+                "mutability": "mutable",
+                "name": "tokenId",
+                "nameLocation": "905:7:34",
+                "nodeType": "VariableDeclaration",
+                "scope": 9113,
+                "src": "897:15:34",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 9105,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "897:7:34",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 9108,
+                "mutability": "mutable",
+                "name": "isSale",
+                "nameLocation": "927:6:34",
+                "nodeType": "VariableDeclaration",
+                "scope": 9113,
+                "src": "922:11:34",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 9107,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "922:4:34",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 9110,
+                "mutability": "mutable",
+                "name": "price",
+                "nameLocation": "951:5:34",
+                "nodeType": "VariableDeclaration",
+                "scope": 9113,
+                "src": "943:13:34",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 9109,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "943:7:34",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 9112,
+                "mutability": "mutable",
+                "name": "healing",
+                "nameLocation": "971:7:34",
+                "nodeType": "VariableDeclaration",
+                "scope": 9113,
+                "src": "966:12:34",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 9111,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "966:4:34",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "CockItem",
+            "nameLocation": "878:8:34",
+            "nodeType": "StructDefinition",
+            "scope": 9125,
+            "src": "871:114:34",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "ItemTypes.CockConsumeItem",
+            "id": 9124,
+            "members": [
+              {
+                "constant": false,
+                "id": 9115,
+                "mutability": "mutable",
+                "name": "CockContract",
+                "nameLocation": "1032:12:34",
+                "nodeType": "VariableDeclaration",
+                "scope": 9124,
+                "src": "1024:20:34",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 9114,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1024:7:34",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 9117,
+                "mutability": "mutable",
+                "name": "CockTokenId",
+                "nameLocation": "1062:11:34",
+                "nodeType": "VariableDeclaration",
+                "scope": 9124,
+                "src": "1054:19:34",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 9116,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1054:7:34",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 9119,
+                "mutability": "mutable",
+                "name": "cockItemContract",
+                "nameLocation": "1091:16:34",
+                "nodeType": "VariableDeclaration",
+                "scope": 9124,
+                "src": "1083:24:34",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 9118,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1083:7:34",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 9121,
+                "mutability": "mutable",
+                "name": "cockItemTokenId",
+                "nameLocation": "1125:15:34",
+                "nodeType": "VariableDeclaration",
+                "scope": 9124,
+                "src": "1117:23:34",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 9120,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1117:7:34",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 9123,
+                "mutability": "mutable",
+                "name": "cockItemAmount",
+                "nameLocation": "1158:14:34",
+                "nodeType": "VariableDeclaration",
+                "scope": 9124,
+                "src": "1150:22:34",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 9122,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1150:7:34",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "CockConsumeItem",
+            "nameLocation": "998:15:34",
+            "nodeType": "StructDefinition",
+            "scope": 9125,
+            "src": "991:188:34",
+            "visibility": "public"
+          }
+        ],
+        "scope": 9126,
+        "src": "57:1124:34",
+        "usedErrors": []
+      }
+    ],
+    "src": "32:1150:34"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.7+commit.e28d00a7.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.16",
+  "updatedAt": "2024-09-11T04:43:54.753Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
